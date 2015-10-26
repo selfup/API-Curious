@@ -7,12 +7,16 @@ body {
   text-align: center;
   position: relative;
   height: 100vh;
-  /*background-image: url("../images/okla11.jpg");*/
+  background-image: url("https://images.unsplash.com/photo-1443479579455-1860f114bf77?dpr=2&fit=crop&fm=jpg&h=900&q=50&w=1700");
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed !important;
   background-position: center;
   background-size: cover !important;
+  color: white;
+}
+
+.jumbotron .h {
   color: white;
 }
 
