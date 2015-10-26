@@ -16,6 +16,12 @@ body {
   color: white;
 }
 
+.jumbotron a {
+    border-radius: 25px;
+    border-bottom-width: medium;
+    border-width: medium;
+}
+
 .jumbotron .h {
   color: white;
 }
