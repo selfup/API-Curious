@@ -4,8 +4,8 @@
 
   <% if current_user %>
     <%= image_tag "#{current_user.image_url}" %><br><br>
-    <p>Bienvenue, <%= current_user.nickname.capitalize %></p>
-    <%= link_to "logout", logout_path, class: "btn btn-primary" %>
+    <p>Bienvenue, <%= current_user.nickname.capitalize %> (<%= current_user.email %>)</p>
+    <%= link_to "logout", logout_path, class: "btn btn-primary btn-md" %>
   <% else %>
     <%= link_to "login", login_path, class: "btn btn-primary" %>
   <% end %>
