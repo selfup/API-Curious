@@ -1,8 +1,9 @@
 <div class="jumbotron">
-  <h1>Welcome!</h1>
+  <h1>Welcome to LeHub</h1>
 
   <% if current_user %>
-    <p>hello, <%= current_user.nickname %></p>
+    <%= image_tag "#{current_user.image_url}" %><br><br>
+    <p>hello, <%= current_user.nickname.capitalize %></p>
     <%= link_to "logout", logout_path, class: "btn btn-primary" %>
   <% else %>
     <%= link_to "login", login_path, class: "btn btn-primary" %>
