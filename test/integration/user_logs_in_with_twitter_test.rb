@@ -1,7 +1,7 @@
 require "test_helper"
 require "capybara"
 
-class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
+class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
   include Capybara::DSL
   def setup
     Capybara.app = OauthWorkshop::Application
@@ -21,8 +21,8 @@ class UserLogsInWithTwitterTest < ActionDispatch::IntegrationTest
 
     OmniAuth.config.test_mode = true
 
-    OmniAuth.config.mock_auth[:twitter] = OmniAuth::AuthHash.new({
-      provider: 'twitter',
+    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({
+      provider: 'github',
       extra: {
         raw_info: {
           user_id: "1234",
