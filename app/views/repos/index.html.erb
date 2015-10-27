@@ -1,5 +1,5 @@
 <div class="jumbotron">
   <% @repos.each do |repo| %>
-    <%= repo["name"] %>
+    <%= repo["name"] %> - <%= link_to "Github Repo", repo["url"].sub("api.", "").sub("repos", "") %> <br>
   <% end %>
 </div>
