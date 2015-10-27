@@ -1,12 +1,14 @@
 class GithubService
-  attr_reader :connection
+  attr_reader :connection, :user
 
-  def initialize
-    @connection = Hurley::Client.new('https://api.github.com/?access_token=ENV["CLIENT_ID"]')
+  def initialize(user)
+    @user = user
+    @connection = Hurley::Client.new("https://api.github.com")
+    @connection.query[:access_token] = user.token
   end
 
-  def repos(current_user)
-    parse(connection.get("#{current_user.nickname}/repos"))
+  def repos
+    parse(connection.get("#{user}/repos"))
   end
 
   private

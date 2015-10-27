@@ -1,5 +1,6 @@
 class Repo < OpenStruct # only use this if you don't want to define the hash keys as data objects
   def self.service
+    require 'pry' ; binding.pry
     @service ||= GithubService.new
   end
 
@@ -8,7 +9,7 @@ class Repo < OpenStruct # only use this if you don't want to define the hash key
   end
 
   def self.find(id)
-    Repo.new(service.(id))
+    Repo.new(service.repos(id))
   end
 
   def self.find(name)
