@@ -5,6 +5,10 @@
   <% if current_user %>
     <%= image_tag "#{current_user.image_url}" %><br><br>
     <p>Bienvenue, <%= current_user.nickname.capitalize %> (<%= current_user.email %>)</p>
+    <p> <%= current_user.name %> </p>
+    <p> <%= current_user.following %> </p>
+    <p> <%= current_user.followers %> </p>
+    <p> <%= current_user.location %> </p>
     <%= link_to "logout", logout_path, class: "btn btn-primary btn-md" %>
   <% else %>
     <%= link_to "login", login_path, class: "btn btn-primary" %>

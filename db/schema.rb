@@ -18,9 +18,13 @@ ActiveRecord::Schema.define(version: 20151026161245) do
 
   create_table "users", force: :cascade do |t|
     t.string   "nickname"
+    t.string   "name"
     t.string   "email"
     t.string   "provider"
     t.string   "uid"
+    t.string   "followers"
+    t.string   "following"
+    t.string   "location"
     t.string   "image_url"
     t.string   "token"
     t.datetime "created_at", null: false

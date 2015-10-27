@@ -3,8 +3,12 @@ class User < ActiveRecord::Base
       user = User.find_or_create_by(provider: auth.provider, uid: auth.provider)
 
       user.email     = auth.info.email
+      user.name      = auth.info.name
       user.nickname  = auth.info.nickname
       user.image_url = auth.info.image
+      user.followers = auth.extra.followers
+      user.following = auth.extra.following
+      user.location  = auth.extra.location
       user.token     = auth.credentials.token
       user.save
 
