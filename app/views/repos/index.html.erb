@@ -1,3 +1,5 @@
-<% @repos.each do |repo| %>
-  <%= repo.name %>
-<% end %>
+<div class="jumbotron">
+  <% @repos.each do |repo| %>
+    <%= repo["name"] %>
+  <% end %>
+</div>

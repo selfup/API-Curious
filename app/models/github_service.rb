@@ -5,12 +5,12 @@ class GithubService
     @user = user
     @connection = Hurley::Client.new("https://api.github.com")
     @connection.query[:access_token] = user.token
-  .header[:accept] = "application/vnd.github+json"
+    @connection.header[:accept] = "application/vnd.github+json"
   end
 
-  def repos
-    require 'pry' ; binding.pry
-    parse(connection.get("#{user}/repos"))
+  def repos(user)
+    # require 'pry' ; binding.pry
+    parse(connection.get("users/#{user.nickname}/repos"))
   end
 
   private

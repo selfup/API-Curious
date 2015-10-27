@@ -1,27 +1,25 @@
-require_relative 'services/github_service'
-
 class Repo < OpenStruct # only use this if you don't want to define the hash keys as data objects
-  # attr_reader :user
+  attr_reader :user
 
   def initialize(user)
     @user = user
   end
 
-  def self.service
-    require 'pry' ; binding.pry
+  def service
     @service ||= GithubService.new(user)
   end
 
   def all
-    service.repos.map { |repo| Repo.new(repo) }
+    # require 'pry' ; binding.pry
+    service.repos(user).map { |repo| repo }
   end
 
   def self.find(id)
-    new(service.repos(id))
+    Repo.new(service.repos(id))
   end
 
   def self.find(name)
-    new(service.repo(name))
+    Repo.new(service.repo(name))
   end
 
   def self.create(params)
