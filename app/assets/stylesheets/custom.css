@@ -7,7 +7,6 @@ body {
   text-align: center;
   position: relative;
   height: 100vh;
-  background-image: url("https://images.unsplash.com/photo-1443479579455-1860f114bf77?dpr=2&fit=crop&fm=jpg&h=900&q=50&w=1700");
   background-color: black;
   background-repeat: no-repeat;
   background-attachment: fixed !important;
@@ -24,6 +23,15 @@ body {
 
 .jumbotron .h {
   color: white;
+}
+
+.container.text-center {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.table-condensed {
+  background-color: white;
 }
 
 img {

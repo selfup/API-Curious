@@ -6,9 +6,9 @@ class User < ActiveRecord::Base
       user.name      = auth.info.name
       user.nickname  = auth.info.nickname
       user.image_url = auth.info.image
-      user.followers = auth.extra.followers
-      user.following = auth.extra.following
-      user.location  = auth.extra.location
+      user.followers = auth.extra.raw_info.followers
+      user.following = auth.extra.raw_info.following
+      user.location  = auth.extra.raw_info.location
       user.token     = auth.credentials.token
       user.save
 

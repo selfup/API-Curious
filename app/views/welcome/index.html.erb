@@ -1,16 +1,28 @@
 <div class="jumbotron">
   <h1>LeHub</h1>
-  <h3>GitHub for Students</h3>
-
   <% if current_user %>
+    <h3> <%= "GitHub for Le #{current_user.nickname.capitalize}" %></h3>
     <%= image_tag "#{current_user.image_url}" %><br><br>
-    <p>Bienvenue, <%= current_user.nickname.capitalize %> (<%= current_user.email %>)</p>
-    <p> <%= current_user.name %> </p>
-    <p> <%= current_user.following %> </p>
-    <p> <%= current_user.followers %> </p>
-    <p> <%= current_user.location %> </p>
-    <%= link_to "logout", logout_path, class: "btn btn-primary btn-md" %>
+    <p>Bienvenue, <%= current_user.name %> (<%= current_user.email %>)</p>
+<div class="container text-center">
+    <div class="table-condensed">
+      <table class="table">
+          <tr>
+            <th>Following</th>
+            <th>Followed by</th>
+            <th>From</th>
+          </tr>
+        <tr>
+          <td><%= current_user.following %></td>
+          <td><%= current_user.followers %></td>
+          <td><%= current_user.location %></td>
+        </tr>
+    </table>
+  </div>
+</div>
+<%= link_to "logout", logout_path, class: "btn btn-primary btn-md" %>
   <% else %>
+    <h3>GitHub for Le You!</h3>
     <%= link_to "login", login_path, class: "btn btn-primary" %>
   <% end %>
 </div>
