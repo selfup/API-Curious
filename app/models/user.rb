@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   def self.from_omniauth(auth)
       user = User.find_or_create_by(provider: auth.provider, uid: auth.provider)
-
+      #testing pull request for api endpoint
       user.email     = auth.info.email
       user.name      = auth.info.name
       user.nickname  = auth.info.nickname
