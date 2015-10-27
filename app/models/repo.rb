@@ -1,3 +1,5 @@
+require_relative 'services/github_service'
+
 class Repo < OpenStruct # only use this if you don't want to define the hash keys as data objects
   def self.service
     require 'pry' ; binding.pry
