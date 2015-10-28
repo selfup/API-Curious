@@ -1,32 +1,32 @@
 <div class="jumbotron">
   <h1>LeHub</h1>
   <% if current_user %>
-    <h3> <%= "GitHub for Le #{current_user.nickname.capitalize}" %></h3>
+    <h3><%= "GitHub for Le #{current_user.nickname.capitalize}" %></h3>
     <%= image_tag "#{current_user.image_url}" %><br><br>
     <p>Bienvenue, <%= current_user.name %> (<%= current_user.email %>)</p>
-<div class="container text-left">
-    <div class="table-condensed">
-      <table class="table">
-          <tr>
-            <th>Following</th>
-            <th>Followed by</th>
-            <th>From</th>
-            <th>Current Streak</th>
-            <th>Longest Streak</th>
-            <th>Year to Date</th>
-          </tr>
-        <tr>
-          <td><%= current_user.following %></td>
-          <td><%= current_user.followers %></td>
-          <td><%= current_user.location %></td>
-          <td><%= @current_streak %></td>
-          <td><%= @longest_streak %></td>
-          <td><%= @year_to_date %></td>
-        </tr>
-    </table>
-  </div>
-</div>
-<%= link_to "logout", logout_path, class: "btn btn-primary btn-md" %>
+    <div class="container text-left">
+        <div class="table-condensed">
+          <table class="table">
+              <tr>
+                <th>Following</th>
+                <th>Followed by</th>
+                <th>From</th>
+                <th>Current Streak</th>
+                <th>Longest Streak</th>
+                <th>Year to Date</th>
+              </tr>
+            <tr>
+              <td><%= current_user.following %></td>
+              <td><%= current_user.followers %></td>
+              <td><%= current_user.location %></td>
+              <td><%= @current_streak %></td>
+              <td><%= @longest_streak %></td>
+              <td><%= @year_to_date %></td>
+            </tr>
+        </table>
+      </div>
+    </div>
+    <%= link_to "logout", logout_path, class: "btn btn-primary btn-md" %>
   <% else %>
     <h3>GitHub for Le You!</h3>
     <%= link_to "login", login_path, class: "btn btn-primary" %>
