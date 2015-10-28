@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   resources :repos
   resources :pullrequests
+  resources :followers
 end
