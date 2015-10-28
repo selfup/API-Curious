@@ -3,6 +3,7 @@ class Github < OpenStruct
 
   def initialize(user)
     @user = user
+    @stats = GithubStats.new(user.nickname)
   end
 
   def service
@@ -15,6 +16,25 @@ class Github < OpenStruct
 
   def pull_requests
     service.pull_request_count(user).map { |pr| pr }
+  end
+
+  def organizations
+    if service.organizations(user).count == 0
+      puts "No Orgs!"
+    else
+      service.organizations(user).map { |orgs| orgs }
+    end
+  end
+
+  def year_to_date
+    @stats.data.scores.reduce(:+)
+  end
+
+  def current_streak
+    @stats.streak.count
+
+  def longest_streak
+    @stats.longest_streak.count
   end
 
   def all_followers

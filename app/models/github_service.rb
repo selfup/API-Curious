@@ -22,6 +22,10 @@ class GithubService
     parse(connection.get("users/#{user.nickname}/followers"))
   end
 
+  def organizations(user)
+    parse(connection.get("users/#{user.nickname}/orgs"))
+  end
+
   private
 
   def parse(response)
