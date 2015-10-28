@@ -8,6 +8,7 @@ body {
   position: relative;
   height: 100vh;
   background-color: black;
+  background-image: url("http://bricklehurst.co.uk/wp-content/uploads/french-flag.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed !important;
   background-position: center;
