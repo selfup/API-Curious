@@ -28,6 +28,18 @@ class GithubServiceTest < ActiveSupport::TestCase
     end
   end
 
+  test '#lastest_follower_events' do
+    VCR.use_cassette("github_service#followers") do
+      VCR.use_cassette("github_service#latest_follower_events") do
+        follower_events = service.latest_followers_events(user)
+        follower_event = service.latest_followers_events(user).first
+
+        assert_equal 25, follower_events.count
+        assert_equal "IssueCommentEvent", follower_event.first["type"]
+      end
+    end
+  end
+
   test '#organizations' do
     VCR.use_cassette("github_service#organizations") do
       organizations = service.organizations(user)

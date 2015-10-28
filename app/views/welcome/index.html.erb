@@ -14,6 +14,8 @@
                 <th>Current Streak</th>
                 <th>Longest Streak</th>
                 <th>Year to Date</th>
+                <th>Starred Repos</th>
+                <th>Today's Contributions</th>
               </tr>
             <tr>
               <td><%= current_user.following %></td>
@@ -22,6 +24,8 @@
               <td><%= @current_streak %></td>
               <td><%= @longest_streak %></td>
               <td><%= @year_to_date %></td>
+              <td><%= @starred_repos %></td>
+              <td><%= @todays_recent_activity %></td>
             </tr>
         </table>
       </div>

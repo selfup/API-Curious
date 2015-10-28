@@ -1,9 +1,13 @@
 <div class="jumbotron">
-  <% @followers.each do |follower| %>
-    <%= follower["login"] %><br>
-  <% end %>
-
-  <% @follower_events.each do |event| %>
-    <%= event["type"] %><br><br>
-  <% end %>
+  <h2>Followers and Their Latest Evenement</h2>
+    <div class="col-md-4">
+      <% @followers.each do |follower| %>
+        <h3><%= follower["login"] %></h3><br>
+      <% end %>
+    </div>
+    <div class="col-md-4">
+      <% @follower_events.each do |event| %>
+        <h3><%= event["type"] %></h3><br>
+      <% end %>
+    </div>
 </div>
