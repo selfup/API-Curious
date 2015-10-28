@@ -30,6 +30,10 @@ body {
     padding-right: 5%;
 }
 
+.td {
+    word-wrap:break-word
+}
+
 .table-condensed {
   background-color: white;
 }
