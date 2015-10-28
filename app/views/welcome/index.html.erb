@@ -11,11 +11,17 @@
             <th>Following</th>
             <th>Followed by</th>
             <th>From</th>
+            <th>Current Streak</th>
+            <th>Longest Streak</th>
+            <th>Year to Date</th>
           </tr>
         <tr>
           <td><%= current_user.following %></td>
           <td><%= current_user.followers %></td>
           <td><%= current_user.location %></td>
+          <td><%= @current_streak %></td>
+          <td><%= @longest_streak %></td>
+          <td><%= @year_to_date %></td>
         </tr>
     </table>
   </div>

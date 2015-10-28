@@ -32,6 +32,7 @@ class Github < OpenStruct
 
   def current_streak
     @stats.streak.count
+  end
 
   def longest_streak
     @stats.longest_streak.count
@@ -42,14 +43,14 @@ class Github < OpenStruct
   end
 
   def self.find(id)
-    Github.new(service.repos(id))
+    new(service.repos(id))
   end
 
   def self.find(name)
-    Github.new(service.repo(name))
+    new(service.repo(name))
   end
 
   def self.create(params)
-    Github.new(service.create(params))
+    new(service.create(params))
   end
 end
