@@ -2,4 +2,8 @@
   <% @followers.each do |follower| %>
     <%= follower["login"] %><br>
   <% end %>
+
+  <% @follower_events.each do |event| %>
+    <%= event["type"] %><br><br>
+  <% end %>
 </div>

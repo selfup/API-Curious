@@ -14,6 +14,16 @@ class Github < OpenStruct
     service.repos(user).map { |repo| repo }
   end
 
+  def latest_followers_events
+    service.latest_followers_events(user).map do |events|
+      if events[0] == nil
+        {"type" => "No events"}
+      else
+        events[0]
+      end
+    end
+  end
+
   def pull_requests
     service.pull_request_count(user).map { |pr| pr }
   end
