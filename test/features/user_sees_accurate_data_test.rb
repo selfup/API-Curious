@@ -20,7 +20,6 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
       assert page.has_content?("LeHub")
       assert page.has_content?("Le Selfup")
       assert page.has_link?("logout")
-      assert page.has_content?("1067")
       assert page.has_content?("33")
       assert page.has_content?("Following")
       assert page.has_content?("Followed by")

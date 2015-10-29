@@ -14,26 +14,26 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-28T17:46:21-06:00">2015-10-28T17:46:21-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-28T20:57:46-06:00">2015-10-28T20:57:46-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">92.47%</span></span>
+    (<span class="covered_percent"><span class="green">92.59%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         4.42
+         4.46
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>15</b> files in total.
-    <b>186</b> relevant lines. 
-    <span class="green"><b>172</b> lines covered</span> and
+    <b>189</b> relevant lines. 
+    <span class="green"><b>175</b> lines covered</span> and
     <span class="red"><b>14</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -57,7 +57,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>14.2</td>
+        <td>15.0</td>
       </tr>
       
       <tr>
@@ -93,9 +93,9 @@
       <tr>
         <td class="strong"><a href="#a85c8d384260fcfb2077aab750c4f011514a1fa1" class="src_link" title="app/controllers/welcome_controller.rb">app/controllers/welcome_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>8</td>
-        <td>8</td>
+        <td>13</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
         <td>3.8</td>
       </tr>
@@ -132,12 +132,12 @@
       
       <tr>
         <td class="strong"><a href="#774abc2176cab4af7a04081145f97a61d0d5cf48" class="src_link" title="app/models/github.rb">app/models/github.rb</a></td>
-        <td class="red strong">77.78 %</td>
-        <td>70</td>
-        <td>36</td>
-        <td>28</td>
+        <td class="red strong">78.95 %</td>
+        <td>74</td>
+        <td>38</td>
+        <td>30</td>
         <td>8</td>
-        <td>4.2</td>
+        <td>4.3</td>
       </tr>
       
       <tr>
@@ -260,8 +260,8 @@
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="67" data-linenumber="6">
-          <span class="hits">67</span>
+        <li class="covered" data-hits="71" data-linenumber="6">
+          <span class="hits">71</span>
           
           <code class="ruby">    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]</code>
         </li>
@@ -527,8 +527,8 @@
     <h3>app/controllers/welcome_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>8</b> relevant lines. 
-      <span class="green"><b>8</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -590,19 +590,25 @@
           <code class="ruby">      @starred_repos  = Github.new(current_user).starred_repos_count</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="10">
+        <li class="covered" data-hits="4" data-linenumber="10">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">      @todays_recent_activity = Github.new(current_user).recent_commits</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="11">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="12">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
           
           
           <code class="ruby">end</code>
@@ -705,10 +711,10 @@
         <div class="source_table" id="774abc2176cab4af7a04081145f97a61d0d5cf48">
   <div class="header">
     <h3>app/models/github.rb</h3>
-    <h4><span class="red">77.78 %</span> covered</h4>
+    <h4><span class="red">78.95 %</span> covered</h4>
     <div>
-      <b>36</b> relevant lines. 
-      <span class="green"><b>28</b> lines covered</span> and
+      <b>38</b> relevant lines. 
+      <span class="green"><b>30</b> lines covered</span> and
       <span class="red"><b>8</b> lines missed.</span>
     </div>
   </div>
@@ -740,14 +746,14 @@
           <code class="ruby">  def initialize(user)</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="5">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="22" data-linenumber="5">
+          <span class="hits">22</span>
           
           <code class="ruby">    @user = user</code>
         </li>
       
-        <li class="covered" data-hits="18" data-linenumber="6">
-          <span class="hits">18</span>
+        <li class="covered" data-hits="22" data-linenumber="6">
+          <span class="hits">22</span>
           
           <code class="ruby">    @stats = GithubStats.new(user.nickname)</code>
         </li>
@@ -1043,13 +1049,13 @@
         <li class="covered" data-hits="1" data-linenumber="55">
           <span class="hits">1</span>
           
-          <code class="ruby">  def all_followers</code>
+          <code class="ruby">  def recent_commits</code>
         </li>
       
-        <li class="covered" data-hits="26" data-linenumber="56">
-          <span class="hits">26</span>
+        <li class="covered" data-hits="4" data-linenumber="56">
+          <span class="hits">4</span>
           
-          <code class="ruby">    service.followers(user).map { |follower| follower }</code>
+          <code class="ruby">    @stats.today</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
@@ -1067,13 +1073,13 @@
         <li class="covered" data-hits="1" data-linenumber="59">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.find(id)</code>
+          <code class="ruby">  def all_followers</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="60">
+        <li class="covered" data-hits="26" data-linenumber="60">
+          <span class="hits">26</span>
           
-          
-          <code class="ruby">    new(service.repos(id))</code>
+          <code class="ruby">    service.followers(user).map { |follower| follower }</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
@@ -1091,13 +1097,13 @@
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.find(name)</code>
+          <code class="ruby">  def self.find(id)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="64">
           
           
-          <code class="ruby">    new(service.repo(name))</code>
+          <code class="ruby">    new(service.repos(id))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
@@ -1115,13 +1121,13 @@
         <li class="covered" data-hits="1" data-linenumber="67">
           <span class="hits">1</span>
           
-          <code class="ruby">  def self.create(params)</code>
+          <code class="ruby">  def self.find(name)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="68">
           
           
-          <code class="ruby">    new(service.create(params))</code>
+          <code class="ruby">    new(service.repo(name))</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
@@ -1131,6 +1137,30 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def self.create(params)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
+          
+          <code class="ruby">    new(service.create(params))</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
           
           
           <code class="ruby">end</code>
@@ -2369,7 +2399,7 @@
         <li class="covered" data-hits="1" data-linenumber="56">
           <span class="hits">1</span>
           
-          <code class="ruby">      assert_equal 1, pull_request_count.first</code>
+          <code class="ruby">      assert_equal 0, pull_request_count.first</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="57">
