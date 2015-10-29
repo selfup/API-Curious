@@ -10,6 +10,7 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
 
     visit "/followers"
     assert_equal "/", current_path
+    assert page.has_content?("You have not logged in!")
   end
 
   test "visitor tries to visit repos" do
@@ -18,6 +19,7 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
 
     visit "/repos"
     assert_equal "/", current_path
+    assert page.has_content?("You have not logged in!")
   end
 
   test "visitor tries to visit pullrequests" do
@@ -26,5 +28,6 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
 
     visit "/pullrequests"
     assert_equal "/", current_path
+    assert page.has_content?("You have not logged in!")
   end
 end
