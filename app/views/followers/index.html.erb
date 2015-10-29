@@ -1,12 +1,12 @@
 <div class="jumbotron">
   <h2>Followers and Their Latest Evenement</h2>
     <div class="col-md-10">
-      <% @followers.each do |follower| %>
+      <% @show.followers.each do |follower| %>
         <h5><%= follower["login"] %></h5>
       <% end %>
     </div>
     <div class="col-md-0">
-      <% @follower_events.each do |event| %>
+      <% @show.follower_events.each do |event| %>
         <h5><%= event["type"] %></h5>
       <% end %>
     </div>
