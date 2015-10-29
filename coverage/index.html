@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-29T11:29:23-06:00">2015-10-29T11:29:23-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-29T11:46:52-06:00">2015-10-29T11:46:52-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.24
+         5.19
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>19</b> files in total.
-    <b>218</b> relevant lines. 
-    <span class="green"><b>218</b> lines covered</span> and
+    <b>221</b> relevant lines. 
+    <span class="green"><b>221</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -203,9 +203,9 @@
       <tr>
         <td class="strong"><a href="#48315a8ed25d234893883506021357b0431774c2" class="src_link" title="test/features/visitor_gets_redirected_to_root_path_test.rb">test/features/visitor_gets_redirected_to_root_path_test.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>30</td>
-        <td>19</td>
-        <td>19</td>
+        <td>33</td>
+        <td>22</td>
+        <td>22</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -339,7 +339,7 @@
         <li class="covered" data-hits="3" data-linenumber="12">
           <span class="hits">3</span>
           
-          <code class="ruby">      flash[:error] = &quot;You have not logged in!&quot;</code>
+          <code class="ruby">      flash[:errors] = &quot;You have not logged in!&quot;</code>
         </li>
       
         <li class="covered" data-hits="3" data-linenumber="13">
@@ -1959,8 +1959,8 @@
     <h3>test/features/visitor_gets_redirected_to_root_path_test.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>19</b> relevant lines. 
-      <span class="green"><b>19</b> lines covered</span> and
+      <b>22</b> relevant lines. 
+      <span class="green"><b>22</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2040,109 +2040,127 @@
           <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="13">
+        <li class="covered" data-hits="1" data-linenumber="13">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    assert page.has_content?(&quot;You have not logged in!&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="14">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="15">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="15">
           
-          <code class="ruby">  test &quot;visitor tries to visit repos&quot; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="16">
           <span class="hits">1</span>
           
-          <code class="ruby">    visit &quot;/&quot;</code>
+          <code class="ruby">  test &quot;visitor tries to visit repos&quot; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="17">
           <span class="hits">1</span>
           
+          <code class="ruby">    visit &quot;/&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="18">
+          <span class="hits">1</span>
+          
           <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="19">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit &quot;/repos&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
+          <code class="ruby">    visit &quot;/repos&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="21">
+          <span class="hits">1</span>
+          
           <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="22">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert page.has_content?(&quot;You have not logged in!&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="24">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  test &quot;visitor tries to visit pullrequests&quot; do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="24">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    visit &quot;/&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+          <code class="ruby">  test &quot;visitor tries to visit pullrequests&quot; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="26">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    visit &quot;/&quot;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
+          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="28">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="29">
+          <span class="hits">1</span>
+          
           <code class="ruby">    visit &quot;/pullrequests&quot;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="28">
+        <li class="covered" data-hits="1" data-linenumber="30">
           <span class="hits">1</span>
           
           <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="29">
+        <li class="covered" data-hits="1" data-linenumber="31">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert page.has_content?(&quot;You have not logged in!&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="32">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="30">
+        <li class="never" data-hits="" data-linenumber="33">
           
           
           <code class="ruby">end</code>

@@ -20,6 +20,11 @@
       </nav>
     </div>
   </nav>
+  <% if flash[:errors] %>
+    <div class="text-center" style="background-color: #D49090">
+      <br><%= flash[:errors] %><br><br>
+    </div>
+  <% end %>
 <%= yield %>
 
 </body>
