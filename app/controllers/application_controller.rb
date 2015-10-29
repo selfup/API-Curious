@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   end
 
   def visitor
-    if current_user == nil
+    if current_user.nil?
       flash[:error] = "You have not logged in!"
       redirect_to root_path
     end

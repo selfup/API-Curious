@@ -227,7 +227,7 @@
         1,
         null
       ],
-      "/Users/RJPB/Documents/API-Curious/app/controllers/repos_controller.rb": [
+      "/Users/RJPB/Documents/API-Curious/app/controllers/pullrequests_controller.rb": [
         1,
         1,
         null,
@@ -382,15 +382,6 @@
         null,
         null
       ],
-      "/Users/RJPB/Documents/API-Curious/app/controllers/pullrequests_controller.rb": [
-        1,
-        1,
-        null,
-        1,
-        1,
-        null,
-        null
-      ],
       "/Users/RJPB/Documents/API-Curious/app/models/pullrequest_decorator.rb": [
         1,
         1,
@@ -434,8 +425,17 @@
         1,
         null,
         null
+      ],
+      "/Users/RJPB/Documents/API-Curious/app/controllers/repos_controller.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null
       ]
     },
-    "timestamp": 1446139592
+    "timestamp": 1446139763
   }
 }
