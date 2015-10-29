@@ -93,6 +93,8 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
 
       visit "/pullrequests"
       assert_equal "/pullrequests", current_path
+      assert page.has_content?("API")
+      assert page.has_content?("0")
     end
   end
 
