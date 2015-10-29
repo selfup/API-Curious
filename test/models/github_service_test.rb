@@ -53,7 +53,7 @@ class GithubServiceTest < ActiveSupport::TestCase
     VCR.use_cassette("github_service#pull_request_count") do
       pull_request_count = service.pull_request_count(user)
 
-      assert_equal 1, pull_request_count.first
+      assert_equal 0, pull_request_count.first
       assert_equal 28, pull_request_count.count
     end
   end
