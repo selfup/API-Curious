@@ -33,8 +33,9 @@ class Github < OpenStruct
   end
 
   def organizations
+    require 'pry' ; binding.pry
     if service.organizations(user).count == 0
-      puts "No Orgs!"
+      {"name" => "No Organizations!"}
     else
       service.organizations(user).map { |orgs| orgs }
     end
