@@ -18,9 +18,15 @@ gem 'githubstats'
 group :development, :test do
   gem 'byebug'
   gem 'pry'
+  gem 'simplecov'
 end
 
 group :development do
   gem 'web-console', '~> 2.0'
   gem 'capybara'
+end
+
+group :test do
+  gem 'vcr'
+  gem 'webmock'
 end
