@@ -14,7 +14,7 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-29T11:03:05-06:00">2015-10-29T11:03:05-06:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-10-29T11:26:32-06:00">2015-10-29T11:26:32-06:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -25,15 +25,15 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         5.55
+         5.24
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>18</b> files in total.
-    <b>190</b> relevant lines. 
-    <span class="green"><b>190</b> lines covered</span> and
+    <b>19</b> files in total.
+    <b>218</b> relevant lines. 
+    <span class="green"><b>218</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -53,19 +53,19 @@
       <tr>
         <td class="strong"><a href="#aa2c43023e419f1670a30d1c87319db6fecee885" class="src_link" title="app/controllers/application_controller.rb">app/controllers/application_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>8</td>
-        <td>5</td>
-        <td>5</td>
+        <td>16</td>
+        <td>10</td>
+        <td>10</td>
         <td>0</td>
-        <td>17.6</td>
+        <td>12.8</td>
       </tr>
       
       <tr>
         <td class="strong"><a href="#9a0362ba288e51bf81e47b5ab75c8159e643d183" class="src_link" title="app/controllers/followers_controller.rb">app/controllers/followers_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
+        <td>8</td>
         <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>5</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -73,9 +73,9 @@
       <tr>
         <td class="strong"><a href="#c42ab0b1a85a908122fbebbf3af30c699eace54e" class="src_link" title="app/controllers/pullrequests_controller.rb">app/controllers/pullrequests_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -83,9 +83,9 @@
       <tr>
         <td class="strong"><a href="#5e2acc5456e47b79ae059bdb73387967ad6becdb" class="src_link" title="app/controllers/repos_controller.rb">app/controllers/repos_controller.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>5</td>
-        <td>3</td>
-        <td>3</td>
+        <td>7</td>
+        <td>4</td>
+        <td>4</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -107,7 +107,7 @@
         <td>5</td>
         <td>5</td>
         <td>0</td>
-        <td>5.6</td>
+        <td>8.0</td>
       </tr>
       
       <tr>
@@ -201,13 +201,23 @@
       </tr>
       
       <tr>
+        <td class="strong"><a href="#48315a8ed25d234893883506021357b0431774c2" class="src_link" title="test/features/visitor_gets_redirected_to_root_path_test.rb">test/features/visitor_gets_redirected_to_root_path_test.rb</a></td>
+        <td class="green strong">100.0 %</td>
+        <td>30</td>
+        <td>19</td>
+        <td>19</td>
+        <td>0</td>
+        <td>1.0</td>
+      </tr>
+      
+      <tr>
         <td class="strong"><a href="#432c2efe9daf3a23ecb096d11d6557bbdbb2d229" class="src_link" title="test/integration/user_logs_in_with_github_test.rb">test/integration/user_logs_in_with_github_test.rb</a></td>
         <td class="green strong">100.0 %</td>
         <td>45</td>
         <td>20</td>
         <td>20</td>
         <td>0</td>
-        <td>2.3</td>
+        <td>3.0</td>
       </tr>
       
       <tr>
@@ -251,8 +261,8 @@
     <h3>app/controllers/application_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>5</b> relevant lines. 
-      <span class="green"><b>5</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>10</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -278,22 +288,136 @@
           <code class="ruby">  helper_method :current_user</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  helper_method :visitor</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="5">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="5">
+        <li class="covered" data-hits="1" data-linenumber="6">
           <span class="hits">1</span>
           
           <code class="ruby">  def current_user</code>
         </li>
       
-        <li class="covered" data-hits="84" data-linenumber="6">
-          <span class="hits">84</span>
+        <li class="covered" data-hits="109" data-linenumber="7">
+          <span class="hits">109</span>
           
           <code class="ruby">    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="8">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="9">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="10">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def visitor</code>
+        </li>
+      
+        <li class="covered" data-hits="7" data-linenumber="11">
+          <span class="hits">7</span>
+          
+          <code class="ruby">    if current_user == nil</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="12">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      flash[:error] = &quot;You have not logged in!&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="13">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      redirect_to root_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
+        <div class="source_table" id="9a0362ba288e51bf81e47b5ab75c8159e643d183">
+  <div class="header">
+    <h3>app/controllers/followers_controller.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>5</b> relevant lines. 
+      <span class="green"><b>5</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class FollowersController &lt; ApplicationController</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  before_action :visitor</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def index</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visitor</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="6">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    @show = FollowerDecorator.new(current_user)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="7">
@@ -312,61 +436,13 @@
   </pre>
 </div>
       
-        <div class="source_table" id="9a0362ba288e51bf81e47b5ab75c8159e643d183">
-  <div class="header">
-    <h3>app/controllers/followers_controller.rb</h3>
-    <h4><span class="green">100.0 %</span> covered</h4>
-    <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-  </div>
-  
-  <pre>
-    <ol>
-      
-        <li class="covered" data-hits="1" data-linenumber="1">
-          <span class="hits">1</span>
-          
-          <code class="ruby">class FollowersController &lt; ApplicationController</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="2">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  def index</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="3">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    @show = FollowerDecorator.new(current_user)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="4">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="5">
-          
-          
-          <code class="ruby">end</code>
-        </li>
-      
-    </ol>
-  </pre>
-</div>
-      
         <div class="source_table" id="c42ab0b1a85a908122fbebbf3af30c699eace54e">
   <div class="header">
     <h3>app/controllers/pullrequests_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -383,22 +459,34 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
+          <code class="ruby">  before_action :visitor</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">    @show = PullrequestDecorator.new(current_user)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -413,8 +501,8 @@
     <h3>app/controllers/repos_controller.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>3</b> lines covered</span> and
+      <b>4</b> relevant lines. 
+      <span class="green"><b>4</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -431,22 +519,34 @@
         <li class="covered" data-hits="1" data-linenumber="2">
           <span class="hits">1</span>
           
+          <code class="ruby">  before_action :visitor</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="3">
+        <li class="covered" data-hits="1" data-linenumber="5">
           <span class="hits">1</span>
           
           <code class="ruby">    @repos = Github.new(current_user).all_repos</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="4">
+        <li class="never" data-hits="" data-linenumber="6">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="5">
+        <li class="never" data-hits="" data-linenumber="7">
           
           
           <code class="ruby">end</code>
@@ -578,14 +678,14 @@
           <code class="ruby">  def index</code>
         </li>
       
-        <li class="covered" data-hits="13" data-linenumber="3">
-          <span class="hits">13</span>
+        <li class="covered" data-hits="19" data-linenumber="3">
+          <span class="hits">19</span>
           
           <code class="ruby">    if current_user == nil</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="4">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="4">
+          <span class="hits">13</span>
           
           <code class="ruby">      current_user</code>
         </li>
@@ -1854,6 +1954,204 @@
   </pre>
 </div>
       
+        <div class="source_table" id="48315a8ed25d234893883506021357b0431774c2">
+  <div class="header">
+    <h3>test/features/visitor_gets_redirected_to_root_path_test.rb</h3>
+    <h4><span class="green">100.0 %</span> covered</h4>
+    <div>
+      <b>19</b> relevant lines. 
+      <span class="green"><b>19</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
+    </div>
+  </div>
+  
+  <pre>
+    <ol>
+      
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;test_helper&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
+          
+          <code class="ruby">require &quot;capybara&quot;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="3">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="4">
+          <span class="hits">1</span>
+          
+          <code class="ruby">class UserLogsInWithGithubTest &lt; ActionDispatch::IntegrationTest</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="5">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  include Capybara::DSL</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="6">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="7">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  test &quot;visitor tries to visit followers&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="8">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="10">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/followers&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="15">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  test &quot;visitor tries to visit repos&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="17">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="18">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="19">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/repos&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="20">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="21">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="22">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  test &quot;visitor tries to visit pullrequests&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="24">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="26">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="27">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit &quot;/pullrequests&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="28">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    assert_equal &quot;/&quot;, current_path</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="29">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="30">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+    </ol>
+  </pre>
+</div>
+      
         <div class="source_table" id="432c2efe9daf3a23ecb096d11d6557bbdbb2d229">
   <div class="header">
     <h3>test/integration/user_logs_in_with_github_test.rb</h3>
@@ -1916,20 +2214,20 @@
           <code class="ruby">  def setup</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="9">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="9">
+          <span class="hits">9</span>
           
           <code class="ruby">    Capybara.app = OauthWorkshop::Application</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="10">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="10">
+          <span class="hits">9</span>
           
           <code class="ruby">    stub_omniauth</code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="11">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="11">
+          <span class="hits">9</span>
           
           <code class="ruby">    @user ||= User.create(nickname: &quot;selfup&quot;, uid: &quot;github&quot;, token: ENV[&quot;TOKEN&quot;])</code>
         </li>
@@ -2024,8 +2322,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="27">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="27">
+          <span class="hits">9</span>
           
           <code class="ruby">    OmniAuth.config.test_mode = true</code>
         </li>
@@ -2036,8 +2334,8 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="6" data-linenumber="29">
-          <span class="hits">6</span>
+        <li class="covered" data-hits="9" data-linenumber="29">
+          <span class="hits">9</span>
           
           <code class="ruby">    OmniAuth.config.mock_auth[:github] = OmniAuth::AuthHash.new({</code>
         </li>
