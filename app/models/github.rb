@@ -1,5 +1,5 @@
 class Github < OpenStruct
-  attr_reader :user
+  attr_reader :user, :stats
 
   def initialize(user)
     @user = user
@@ -41,19 +41,19 @@ class Github < OpenStruct
   end
 
   def year_to_date
-    @stats.data.scores.reduce(:+)
+    stats.data.scores.reduce(:+)
   end
 
   def current_streak
-    @stats.streak.count
+    stats.streak.count
   end
 
   def longest_streak
-    @stats.longest_streak.count
+    stats.longest_streak.count
   end
 
   def recent_commits
-    @stats.today
+    stats.today
   end
 
   def all_followers
