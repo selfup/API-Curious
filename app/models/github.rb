@@ -14,6 +14,20 @@ class Github < OpenStruct
     service.repos(user).map { |repo| repo }
   end
 
+  def starred_repos_count
+    service.starred_repos(user)
+  end
+
+  def latest_followers_events
+    service.latest_followers_events(user).map do |events|
+      if events[0] == nil
+        {"type" => "No events", "payload" => "None"}
+      else
+        events[0]
+      end
+    end
+  end
+
   def pull_requests
     service.pull_request_count(user).map { |pr| pr }
   end
@@ -36,6 +50,10 @@ class Github < OpenStruct
 
   def longest_streak
     @stats.longest_streak.count
+  end
+
+  def recent_commits
+    @stats.today
   end
 
   def all_followers

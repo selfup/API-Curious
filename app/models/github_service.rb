@@ -14,12 +14,23 @@ class GithubService
 
   def pull_request_count(user)
     repos(user).map do |repo|
-      parse(connection.get("repos/#{user.nickname}/#{repo["name"]}/pulls")).count
+      parse(connection.
+            get("repos/#{user.nickname}/#{repo["name"]}/pulls")).count
     end
+  end
+
+  def starred_repos(user)
+    parse(connection.get("users/#{user.nickname}/starred")).count
   end
 
   def followers(user)
     parse(connection.get("users/#{user.nickname}/followers"))
+  end
+
+  def latest_followers_events(user)
+    followers(user).map do |follower|
+      parse(connection.get("users/#{follower["login"]}/events"))
+    end
   end
 
   def organizations(user)
