@@ -4,12 +4,12 @@
       <div class="table-condensed">
         <table class="table">
             <tr>
-              <% @repos.each do |repo| %>
+              <% @show.repos.each do |repo| %>
                 <th><%= repo["name"][0..2] %></th>
               <% end %>
             </tr>
           <tr>
-            <% @pull_requests.each do |pull_request| %>
+            <% @show.open_pull_requests.each do |pull_request| %>
               <td><%= pull_request %></td>
             <% end %>
           </tr>

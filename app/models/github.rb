@@ -32,14 +32,6 @@ class Github < OpenStruct
     service.pull_request_count(user).map { |pr| pr }
   end
 
-  def organizations
-    if service.organizations(user).count == 0
-      puts "No Orgs!"
-    else
-      service.organizations(user).map { |orgs| orgs }
-    end
-  end
-
   def year_to_date
     stats.data.scores.reduce(:+)
   end
@@ -58,17 +50,5 @@ class Github < OpenStruct
 
   def all_followers
     service.followers(user).map { |follower| follower }
-  end
-
-  def self.find(id)
-    new(service.repos(id))
-  end
-
-  def self.find(name)
-    new(service.repo(name))
-  end
-
-  def self.create(params)
-    new(service.create(params))
   end
 end
