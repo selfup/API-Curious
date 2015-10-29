@@ -66,6 +66,36 @@ class UserLogsInWithGithubTest < ActionDispatch::IntegrationTest
     end
   end
 
+  test "user logs out and does not see github information" do
+    VCR.use_cassette("github_service#login") do
+      visit "/"
+      assert_equal 200, page.status_code
+      click_link "login"
+      assert_equal "/", current_path
+      assert page.has_content?("LeHub")
+      assert page.has_content?("Le Selfup")
+
+      click_link "logout"
+      assert_equal "/", current_path
+      assert page.has_content?("LeHub")
+      refute page.has_content?("Le Selfup")
+    end
+  end
+
+  test "user logs in and checks out how many pull requests are open per repo" do
+    VCR.use_cassette("github_service#pullrequests") do
+      visit "/"
+      assert_equal 200, page.status_code
+      click_link "login"
+      assert_equal "/", current_path
+      assert page.has_content?("LeHub")
+      assert page.has_content?("Le Selfup")
+
+      visit "/pullrequests"
+      assert_equal "/pullrequests", current_path
+    end
+  end
+
   def stub_omniauth
 
     OmniAuth.config.test_mode = true
